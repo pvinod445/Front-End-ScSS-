@@ -1,0 +1,177 @@
+// variables
+$mm-sample-font-sans-serif: Helvetica, Arial, sans-serif;
+$mm-sample-font-serif:      Georgia, "Times New Roman", Times, serif;
+
+
+html {
+  font-size: 62.5%; //why do we set the font size to this value at the html level? If we assign font size at html level it means that it is base for calculating font size
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  //nav work is already completed, no need to touch this
+  height: 6rem;
+  background-color: #002f6c;
+  box-sizing: border-box;
+  padding: 2.5rem 0;
+
+  .container {
+    margin-top: -.6rem;
+  }
+
+  img {
+    width: 16rem;
+  }
+}
+
+.container { margin-top: 5rem; }
+
+
+//Typography and button styles - included are some placeholders for styling
+//Keep in mind, a component may use one placeholder for a title / etc now but it
+// may change in 6 months and we want to be able to swap via only CSS changes
+h1, h2, %h2 {
+  font-family: $mm-sample-font-serif;
+  color: #000;
+}
+
+p, h1, h2, %h2 { margin: 0 0 2rem 0; }
+h1      { font-size: 4rem; }
+h2, %h2 { font-size: 3rem; }
+p       { font-size: 1.4rem; }
+
+a {
+  color: #005A9F;
+  &:hover {
+    color: #002f6c;
+  }
+}
+
+%eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+%subtext {
+  font-size: 1.2rem;
+}
+
+%btn-primary {
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.2rem 4rem;
+  background-color: yellow;
+  border: 0;
+  border-radius: 0;
+}
+.mm-cards {
+  display: flex;
+  width: 100%;
+}
+.mm-card {
+  //feel free to make any comments to explain your thinking
+  //mm-card is single card where we can display card side by side
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 3px white;
+  margin: 20px 20px 20px 0px;
+
+  .image {
+    //including some base styles so this shows up in the basic page, feel free to change these
+    min-height: 230px;
+    min-width: 50px;
+    background-size: 100% 100%;
+  }
+
+  .content {
+    text-align: left;
+    padding: 26px;
+    font-family: $mm-sample-font-sans-serif;
+    background-color: white;
+    height: 360px;
+    
+    .last {
+      padding-bottom: 43px;
+    }
+
+    p:first-of-type {
+      text-transform: uppercase;
+      text-align: left;
+      
+    }
+  
+    h4 {
+      font-family: $mm-sample-font-serif;
+    }
+    input.button {
+      background-color: yellow;
+      border: none;
+      color: black;
+      outline: none;
+      cursor: pointer;
+      font: inherit;
+      text-transform: uppercase;    
+      padding: 5px 35px 5px 35px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 59px;
+      
+    }
+    a.link {
+      color: blue;
+      padding: 10px;
+      position: absolute;
+      bottom: 52px
+    }
+    footer {
+      p:first-of-type{
+        text-transform: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mm-cards {
+      display: table-row;
+      
+  }
+  
+  .mm-card {
+    margin: 0px;
+    margin-bottom: 20px;
+    background-color: white;
+    
+    .content {
+      height: 360px !important;
+    }
+    .first {
+      padding-bottom: 46px !important;
+    }
+    .second {
+      padding-bottom: 116px !important;
+    }
+    .last {
+      padding-bottom: 15px !important;
+    }
+    input.button {
+      position: relative !important;
+      bottom: unset !important;
+    }
+    a.link {
+      position: relative !important;
+      bottom: unset !important;
+    }
+  }
+}

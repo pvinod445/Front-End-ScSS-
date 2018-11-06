@@ -1,0 +1,109 @@
+html {
+  font-size: 62.5%;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body {
+  background-color: #f3f3f3; }
+
+header {
+  height: 6rem;
+  background-color: #002f6c;
+  box-sizing: border-box;
+  padding: 2.5rem 0; }
+  header .container {
+    margin-top: -.6rem; }
+  header img {
+    width: 16rem; }
+
+.container {
+  margin-top: 5rem; }
+
+h1, h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #000; }
+
+p, h1, h2 {
+  margin: 0 0 2rem 0; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3rem; }
+
+p {
+  font-size: 1.4rem; }
+
+a {
+  color: #005A9F; }
+  a:hover {
+    color: #002f6c; }
+
+.mm-cards {
+  display: flex;
+  width: 100%; }
+
+.mm-card {
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 3px white;
+  margin: 20px 20px 20px 0px; }
+  .mm-card .image {
+    min-height: 230px;
+    min-width: 50px;
+    background-size: 100% 100%; }
+  .mm-card .content {
+    text-align: left;
+    padding: 26px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+    height: 360px; }
+    .mm-card .content .last {
+      padding-bottom: 43px; }
+    .mm-card .content p:first-of-type {
+      text-transform: uppercase;
+      text-align: left; }
+    .mm-card .content h4 {
+      font-family: Georgia, "Times New Roman", Times, serif; }
+    .mm-card .content input.button {
+      background-color: yellow;
+      border: none;
+      color: black;
+      outline: none;
+      cursor: pointer;
+      font: inherit;
+      text-transform: uppercase;
+      padding: 5px 35px 5px 35px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 59px; }
+    .mm-card .content a.link {
+      color: blue;
+      padding: 10px;
+      position: absolute;
+      bottom: 52px; }
+    .mm-card .content footer p:first-of-type {
+      text-transform: none; }
+
+@media (max-width: 600px) {
+  .mm-cards {
+    display: table-row; }
+  .mm-card {
+    margin: 0px;
+    margin-bottom: 20px;
+    background-color: white; }
+    .mm-card .content {
+      height: 360px !important; }
+    .mm-card .first {
+      padding-bottom: 46px !important; }
+    .mm-card .second {
+      padding-bottom: 116px !important; }
+    .mm-card .last {
+      padding-bottom: 15px !important; }
+    .mm-card input.button {
+      position: relative !important;
+      bottom: unset !important; }
+    .mm-card a.link {
+      position: relative !important;
+      bottom: unset !important; } }
